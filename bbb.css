@@ -1,0 +1,4 @@
+div[class^="systemMessage"],
+div[class*="systemMessage"] {
+    display: none !important;
+}

@@ -1,0 +1,29 @@
+{
+    "name": "BetterENT",
+    "version": "1.0",
+    "description": "Change css for moddle and big blue button to make them more modern",
+    "permissions": [],
+    "web_accessible_resources": [
+        "fix.css"
+    ],
+    "icons": {
+        "16": "images/camera16.png",
+        "32": "images/camera32.png",
+        "64": "images/camera64.png",
+        "128": "images/camera128.png"
+    },
+    "content_scripts": [{
+        "matches":    ["*://*.isen-ouest.fr/uPortal/*"],
+        "css":        ["uPortal.css"],
+        "js":         ["script.js"]
+    },{
+        "matches":    ["*://*.isen-ouest.fr/moodle/*"],
+        "css":        ["moodle.css"],
+        "js":         ["script.js"]
+    },{
+        "matches":    ["*://*.isen-ouest.fr/html5client/*"],
+        "css":        ["bbb.css"],
+        "js":         ["script.js"]
+    }],
+    "manifest_version": 2
+}
