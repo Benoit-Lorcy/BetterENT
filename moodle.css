@@ -68,7 +68,8 @@ input[type="reset"] {
 }
 
 #status_bar_span::after {
-    content: url("test.svg");
+    transform: scale(0.1);
+    content: url("https://raw.githubusercontent.com/Benoit-Lorcy/BetterENT/e712db6eeeeeb566bd2447aa34b3a5a1ee7be9c9/test.svg");
 }
 
 #spinning_wheel {
