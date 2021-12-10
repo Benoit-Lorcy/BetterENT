@@ -1,10 +1,58 @@
-body {
-    background: #c5d3ff !important ;
-    font-family: "Courgette", cursive !important;
+/* font include */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* define */
+:root {
+    --background-down: #21252b;
+    --background-up: #282c34;
+    --text-color: rgba(255, 255, 255, 0.801);
+    --link-color: #489ba5;
 }
 
+/* navbar */
+
+.portal-global {
+    background: var(--background-up) !important;
+    box-shadow: 0px 0px 35px rgba(39, 44, 47, 0.1) !important;
+    border: 0px solid #e3e3e3 !important;
+    font-weight: normal !important;
+    color: var(--text-color) !important;
+}
+
+.portal-nav {
+    background: var(--background-up) !important;
+    box-shadow: 0px 0px 35px rgba(39, 44, 47, 0.1) !important;
+    border: 0px solid #e3e3e3 !important;
+    font-weight: normal !important;
+}
+.list-group-item.active {
+    background: var(--background-down) !important;
+}
+.list-group-item:hover {
+    background: var(--background-down) !important;
+}
+/* blocks */
+#region-footer-second {
+    background: var(--background-up) !important;
+    box-shadow: 0px 0px 35px rgba(39, 44, 47, 0.1) !important;
+    font-weight: normal !important;
+}
+
+.no-style div {
+    background: var(--background-up) !important;
+    border-radius: 3px !important;
+}
+
+.portlet-card-icon {
+    background-color: red !important;
+}
+
+.content-grid {
+    color: var(--text-color) !important;
+}
+/* background & footer */
 .portal .portal-header {
-    background: #c5d3ff !important;
+    background: var(--background-down) !important ;
 }
 
 .portal #portalPageBody::before {
@@ -12,32 +60,104 @@ body {
 }
 
 .portal #portalPageBody {
-    background-color: #c5d3ff !important;
+    background: var(--background-down) !important ;
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100vw;
 }
 
 html {
-    background-color: #c5d3ff !important;
+    background: var(--background-down) !important ;
     overflow-x: inherit !important;
 }
 
 html body #wrapper {
-    background-color: #4d4d4d00 !important;
+    background: var(--background-down) !important ;
 }
 
+/*kinda useless*/
 #portalTip {
     display: none !important;
 }
-/*
-.up-portlet-wrapper-inner {
-    display: none !important;
-}*/
 
 #region-customize {
     display: none !important;
+}
+
+/* text */
+body {
+    background: var(--background-down) !important ;
+    font-family: "Roboto", cursive !important;
+    color: var(--text-color) !important;
+}
+
+a {
+    color: var(--link-color) !important;
+    animation: color-animation 6s infinite;
+}
+/*images */
+
+img {
+    -webkit-animation: filter-animation 6s infinite;
+    animation: filter-animation 6s infinite;
+}
+
+/* animations */
+@-webkit-keyframes filter-animation {
+    0% {
+        -webkit-filter: hue-rotate(0deg) invert(75%);
+    }
+
+    50% {
+        -webkit-filter: hue-rotate(180deg) invert(75%);
+    }
+
+    100% {
+        -webkit-filter: hue-rotate(360deg) invert(75%);
+    }
+}
+
+@keyframes filter-animation {
+    0% {
+        filter: hue-rotate(0deg) invert(75%);
+    }
+
+    50% {
+        filter: hue-rotate(180deg) invert(75%);
+    }
+
+    100% {
+        filter: hue-rotate(360deg) invert(75%);
+    }
+}
+
+@-webkit-keyframes color-animation {
+    0% {
+        -webkit-filter: hue-rotate(0deg);
+    }
+
+    50% {
+        -webkit-filter: hue-rotate(180deg);
+    }
+
+    100% {
+        -webkit-filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes color-animation {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(180deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }

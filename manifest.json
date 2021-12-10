@@ -12,18 +12,27 @@
         "64": "images/camera64.png",
         "128": "images/camera128.png"
     },
-    "content_scripts": [{
+    "content_scripts": [
+        {
         "matches":    ["*://*.isen-ouest.fr/uPortal/*"],
         "css":        ["uPortal.css"],
-        "js":         ["script.js"]
+        "js":         ["script.js"],
+        "run_at":  "document_start"
+    },{
+        "matches":    ["*://*.isen-ouest.fr/cas/*"],
+        "css":        ["cas.css"],
+        "js":         ["script.js"],
+        "run_at":  "document_start"
     },{
         "matches":    ["*://*.isen-ouest.fr/moodle/*"],
         "css":        ["moodle.css"],
-        "js":         ["script.js"]
+        "js":         ["script.js"],
+        "run_at":  "document_start"
     },{
         "matches":    ["*://*.isen-ouest.fr/html5client/*"],
         "css":        ["bbb.css"],
-        "js":         ["script.js"]
+        "js":         ["script.js"],
+        "run_at":  "document_start"
     }],
     "manifest_version": 2
 }
